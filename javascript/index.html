@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body>
+
+    <!-- Start:Script -->
+    <script>
+        let persons = [
+            {
+                firstName: "Inzamul",
+                lastName: "Haq",
+                age: 27,
+                id: 01
+            },
+            {
+                firstName: "Rabbi",
+                lastName: "Mg",
+                age: 30,
+                id: 02
+            },
+        ];
+
+        class Person {
+            firstName;
+            lastName;
+            age;
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.personInfo()
+            }
+            personInfo() {
+                document.write("My Name is " + this.firstName + " " + this.lastName +" . My Age is " + this.age +" Years Old </br>");
+            }
+        }
+
+        
+        persons.forEach(function(item){
+            new Person(item.firstName,item.lastName,item.age);
+        });
+
+           // class Einfo{
+        //     name;
+        //     age;
+        //     address;
+        //     constructor(name,age,address){
+        //         this.name = name;
+        //         this.age = age;
+        //         this.address =address;
+        //         this.allInfo();
+        //     }
+        //     allInfo(){
+        //         document.write("my name is"+  this.name + " my age is" +  this.age + " my address is" +  this.address + "</br>")
+        //     }
+        // };
+        // for(let i=0; i<dateInfo.length; i++){
+        //     new Einfo(dateInfo[i].name, dateInfo[i].age, dateInfo[i].address);
+        // };
+
+
+
+    </script>
+</body>
+
+</html>

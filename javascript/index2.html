@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/tailwind.css"> -->
+</head>
+<body>
+    <section id="inputFrom">
+        <table style="margin: 0 auto;">
+            <caption style="text-align:left; padding-bottom:20px;">User Info</caption>
+            <tr>
+              <td style="padding-bottom:20px;"><input id="name" type="text" placeholder="Name" value="" ></td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:20px;"><input id="email" type="email" placeholder="Email" value="" ></td>
+            </tr>
+            <tr>
+                <td style="padding-bottom:20px;">                    
+                    <select id="allage">
+                        <option  type="number" value="">Select Age</option>
+                    </select>           
+                </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:20px;"><textarea name="address" id="address" cols="30" placeholder="Address" rows="4"></textarea></td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:20px;"><input onclick="myFunction()" type="submit" value="Submit"></td>
+            </tr>
+        </table> 
+        <h1 style="text-align: center;">Result: </h1>
+        <table style="margin: 10px auto;">
+            <tr>
+                <td>Name </td>
+                <td>: <span id="name-result"></span></td>
+            </tr>
+            <tr>
+                <td>Email </td>
+                <td>: <span id="email-result"></span></td>
+            </tr>
+            <tr>
+                <td>Age </td>
+                <td>: <span id="age-result"></span></td>
+            </tr>
+            <tr>
+                <td>Address </td>
+                <td>: <span id="address-result"></span></td>
+            </tr>
+        </table>
+    </section>
+    <script>        
+        let allages ="";
+        
+        for(let i = 13; i<=50; i++ ){
+            allages +=`<option type="number" value="${i}">${i}</option>`;
+        };
+        
+        document.getElementById("allage").innerHTML = allages;
+
+        function myFunction(){
+            let userName = document.getElementById("name").value;
+            let userEmail = document.getElementById("email").value;
+            let userAge = document.getElementById("allage").value;
+            let userAddress = document.getElementById("address").value;
+
+            document.getElementById("name-result").innerHTML = userName;        
+            document.getElementById("email-result").innerHTML = userEmail;        
+            document.getElementById("age-result").innerHTML = userAge;        
+            document.getElementById("address-result").innerHTML = userAddress;        
+        };
+    </script>
+</body>
+</html>
